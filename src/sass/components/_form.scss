@@ -1,0 +1,25 @@
+.form {
+  max-width: 35rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  background-color: #fff;
+  flex-direction: column;
+  display: flex;
+  padding: 1.25rem 1rem;
+  border: 2px solid black;
+
+  &__label {
+  }
+  &__input {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  &__control {
+    margin-bottom: 1.25rem;
+  }
+  &__cta-register {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}

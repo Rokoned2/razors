@@ -1,0 +1,288 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap");
+:root {
+  --max-width-page: 117rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: var(--mainColor);
+}
+
+@media only screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+::-moz-selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+::selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: var(--secondaryText);
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: var(--secondaryText);
+}
+
+.heading-primary {
+  font-weight: 500;
+  color: #000;
+  text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  margin-bottom: 6rem;
+}
+
+.heading-primary--main {
+  font-family: "Russo One", sans-serif;
+  display: block;
+  font-size: 5.6rem;
+  text-align: center;
+}
+
+.heading-secondary {
+  font-size: 2.8rem;
+  color: var(--mainText);
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  color: var(--mainText);
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: var(--mainColor);
+}
+
+@media only screen and (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
+}
+
+::-moz-selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+::selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: var(--secondaryText);
+}
+
+.header {
+  position: relative;
+  min-height: calc(100vh - 5rem);
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/mainBcg.jpeg") center/cover no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/mainBcg.jpeg") center/cover no-repeat;
+}
+
+.header__banner {
+  width: "100%";
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+}
+
+.header__banner-text {
+  position: absolute;
+  margin: auto;
+}
+
+.form {
+  max-width: 35rem;
+  margin: 0 auto;
+  margin-top: 10rem;
+  background-color: #fff;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.25rem 1rem;
+  border: 2px solid black;
+}
+
+.form__input {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.form__control {
+  margin-bottom: 1.25rem;
+}
+
+.form__cta-register {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.product-card {
+  max-width: 27rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.product-card__img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.product-card__img {
+  width: 100%;
+}
+
+.product-card__name {
+  text-transform: uppercase;
+}
+
+.featured__products {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 120rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: blue;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 5rem;
+  max-width: var(--max-width-page);
+}
+
+.navbar__item {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background-color: red;
+}
+
+.navbar__logo {
+  text-align: center;
+}
+
+.navbar__list-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
+}
+
+.section {
+  max-width: 117rem;
+  padding: 4rem 0;
+}
+/*# sourceMappingURL=main.css.map */

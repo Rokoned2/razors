@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap");
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: var(--secondaryText);
+}
+
+.heading-primary {
+  font-weight: 500;
+
+  color: $color-black;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    font-family: "Russo One", sans-serif;
+    display: block;
+    font-size: 5.6rem;
+    text-align: center;
+  }
+}
+.heading-secondary {
+  font-size: 2.8rem;
+  color: var(--mainText);
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  color: var(--mainText);
+  font-family: "Russo One", sans-serif;
+  font-weight: 500;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
