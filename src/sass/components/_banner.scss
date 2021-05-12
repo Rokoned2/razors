@@ -1,4 +1,4 @@
-.header {
+.banner {
   position: relative;
   min-height: calc(100vh - 5rem);
   overflow: hidden;
@@ -10,13 +10,8 @@
     ),
     url("../images/mainBcg.jpeg") center/cover no-repeat;
 
-  &__banner {
-    width: "100%";
-    object-fit: cover;
-    background-size: cover;
-  }
-  &__banner-text {
-    position: absolute;
+  &__text {
+    width: 117rem;
     margin: auto;
   }
 }

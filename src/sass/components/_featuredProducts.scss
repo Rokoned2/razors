@@ -1,5 +1,8 @@
-.featured__products {
-  justify-content: space-between;
-  max-width: 120rem;
-  display: flex;
+.featured-products {
+  padding: 0 2rem;
+  &__list {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+  }
 }

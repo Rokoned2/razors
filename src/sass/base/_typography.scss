@@ -5,7 +5,7 @@
 body {
   font-family: "Roboto Mono", monospace;
   font-weight: 500;
-  /*font-size: 16px;*/
+  font-size: 16px;
   line-height: 1.7;
   color: var(--secondaryText);
 }
@@ -17,20 +17,20 @@ body {
   text-transform: uppercase;
 
   backface-visibility: hidden;
-  margin-bottom: 6rem;
 
   &--main {
     font-family: "Russo One", sans-serif;
     display: block;
     font-size: 5.6rem;
-    text-align: center;
+    // text-align: center;
   }
 }
 .heading-secondary {
   font-size: 2.8rem;
-  color: var(--mainText);
+  // color: var(--mainText);
   font-family: "Russo One", sans-serif;
   font-weight: 500;
+  // text-align: center;
 }
 
 .heading-tertiary {

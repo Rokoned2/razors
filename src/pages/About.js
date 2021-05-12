@@ -2,8 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <>
-      <div className="heading__secondary">Sobre nosotros</div>;
+    <div className="section">
+      <div className="heading-secondary">Sobre nosotros</div>
       <p className="about__text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
         repudiandae architecto qui adipisci in officiis, aperiam sequi atque
@@ -11,7 +11,7 @@ const About = () => {
         nobis veritatis quasi explicabo obcaecati doloremque? Placeat ratione
         hic aspernatur error blanditiis?{" "}
       </p>
-    </>
+    </div>
   );
 };
 

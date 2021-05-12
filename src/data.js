@@ -1,4 +1,7 @@
-import React from "react";
+import Image1 from "./images/navajarazor.png";
+import Image2 from "./images/maquinillagilletenaranja.png";
+import Image3 from "./images/afeitadoraelectricapanasonic.png";
+import Image4 from "./images/cuchilladeafeitar.png";
 
 const products = [
   {
@@ -19,7 +22,6 @@ const products = [
     price: "24.99",
     image: Image3,
   },
-
   {
     id: "4",
     name: "cuchilla de afeitar",
@@ -28,13 +30,4 @@ const products = [
   },
 ];
 
-const ProductList = () => {
-  return (
-    <>
-      <div className="heading__secondary">Nuestros Productos</div>
-      {}
-    </>
-  );
-};
-
-export default ProductList;
+export default products;

@@ -1,13 +1,15 @@
 import React from "react";
 
-const ProductCard = ({ image, name, price }) => {
+const ProductCard = ({ id, image, name, price }) => {
   return (
     <div className="product-card">
-      <div className="product-card__image-container">
-        <img src={image} alt={name} className="product-card__card" />
+      <div className="product-card__img-container">
+        <img src={image} alt={name} className="product-card__img" />
       </div>
-      <div className="product-card__name">{name}</div>
-      <div className="product-card__price">{price}</div>
+      <div className="product-card__info">
+        <div className="product-card__name">{name}</div>
+        <div className="product-card__price">{price}</div>
+      </div>
     </div>
   );
 };

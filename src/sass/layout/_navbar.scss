@@ -1,21 +1,34 @@
 .navbar {
-  display: flex;
-  width: 100%;
-  background-color: blue;
-  align-items: center;
-  justify-content: space-between;
-  height: 5rem;
-  max-width: var(--max-width-page);
+  width: 100vw;
+  padding: 0 2rem;
+  box-shadow: var(--lightShadow);
+
+  &__nav {
+    max-width: 117rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__item {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin-right: 0.5rem;
     padding: 0.25rem 0.5rem;
-    background-color: red;
+    & a {
+      text-decoration: none;
+      color: #000;
+    }
   }
 
   &__logo {
     text-align: center;
+
+    & a {
+      text-decoration: none;
+      font-size: 5rem;
+      color: #000;
+    }
   }
   &__list-items {
     display: flex;

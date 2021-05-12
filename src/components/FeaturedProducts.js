@@ -1,42 +1,35 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
-import Image1 from "../images/navajarazor.png";
-import Image2 from "../images/maquinillagilletenaranja.png";
-import Image3 from "../images/afeitadoraelectricapanasonic.png";
-import Image4 from "../images/cuchilladeafeitar.png";
-
-const products = [
-  {
-    name: "navaja razor",
-    price: "7.99",
-    image: Image1,
-  },
-  {
-    name: "maquinilla gillete naranja",
-    price: "7.99",
-    image: Image2,
-  },
-  {
-    name: "afeitadora eléctrica panasonic",
-    price: "24.99",
-    image: Image3,
-  },
-
-  {
-    name: "cuchilla de afeitar",
-    price: "7.99",
-    image: Image4,
-  },
-];
+import { fetchFeatProducts } from "../redux/actions";
+import { useSelector, useDispatch } from "react-redux";
 
 const FeaturedProducts = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchFeatProducts());
+  }, [dispatch]);
+
+  const featProducts = useSelector((state) =>
+    Object.values(state.feat_products)
+  );
+
+  if (!featProducts) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <div className="section">
-      <h2 className="heading__secondary">Featured Products</h2>
-      <div className="featured__products">
-        {products.map(({ name, price, image }) => (
-          <ProductCard name={name} price={price} image={image} />
-        ))}
+    <div className="section featured-products">
+      <h2 className="heading-secondary">Featured Products</h2>
+      <div className="featured-products__list">
+        {featProducts.map(({ id, name, price, image }) => {
+          return (
+            <Link to={`/productos/${id}`} key={id}>
+              <ProductCard name={name} price={price} image={image} />
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

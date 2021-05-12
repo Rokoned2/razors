@@ -2,17 +2,25 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => console.log(data);
+
   return (
     <>
-      <div className="heading-secondary text-center">Ingresa</div>
+      <div className="heading-secondary text-center">Regístrate</div>
       <form onSubmit={handleSubmit(onSubmit)} className="form">
+        <div className="form__control">
+          <label className="form__label">Nombre de usuario</label>
+          <input
+            className="form__input"
+            {...register("username", { required: true })}
+          />
+        </div>
         <div className="form__control">
           <label className="form__label">Correo electrónico</label>
           <input
@@ -32,11 +40,11 @@ const Login = () => {
         ) : null}
         <input type="submit" />
         <div className="form__cta-register">
-          ¿Necesitas registrarte? <Link to="/register">Haz click aquí!</Link>
+          ¿Ya estás registrado? <Link to="/login">Haz click aquí!</Link>
         </div>
       </form>
     </>
   );
 };
 
-export default Login;
+export default Register;
