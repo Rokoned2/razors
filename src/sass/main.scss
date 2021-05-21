@@ -25,6 +25,9 @@
 @import "components/form";
 @import "components/productCard";
 @import "components/featuredProducts";
+@import "components/cart";
+@import "components/counter";
+@import "components/button";
 
 @import "layout/navbar";
 @import "layout/section";
@@ -32,5 +35,6 @@
 @import "pages/home";
 @import "pages/productDetails";
 @import "pages/product-search";
+@import "pages/upload";
 // @import "pages/projects";
 // @import "pages/contact";

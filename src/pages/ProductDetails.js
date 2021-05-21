@@ -36,6 +36,8 @@ const ProductDetails = (props) => {
           scrambled it to make a type specimen book. It has survived not only
           five centuries.
         </p>
+
+        <button className="product-details__btn btn">Añadir al carrito</button>
       </div>
     </div>
   );

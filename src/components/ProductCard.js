@@ -1,6 +1,7 @@
 import React from "react";
 
 const ProductCard = ({ id, image, name, price }) => {
+  // const { data: user } = useUser();
   return (
     <div className="product-card">
       <div className="product-card__img-container">

@@ -1,32 +1,31 @@
-import Image1 from "./images/navajarazor.png";
-import Image2 from "./images/maquinillagilletenaranja.png";
-import Image3 from "./images/afeitadoraelectricapanasonic.png";
-import Image4 from "./images/cuchilladeafeitar.png";
-
 const products = [
   {
     id: "1",
     name: "navaja razor",
+    cantidad: 1,
     price: "7.99",
-    image: Image1,
+    image: "http://localhost:5000/uploads\\navajarazor.png",
   },
   {
     id: "2",
     name: "maquinilla gillete naranja",
     price: "7.99",
-    image: Image2,
+    cantidad: 1,
+    image: "http://localhost:5000/uploads\\maquinillagilletenaranja.png",
   },
   {
     id: "3",
     name: "afeitadora eléctrica panasonic",
     price: "24.99",
-    image: Image3,
+    cantidad: 1,
+    image: "http://localhost:5000/uploads\\afeitadoraelectricapanasonic.png",
   },
   {
     id: "4",
     name: "cuchilla de afeitar",
     price: "7.99",
-    image: Image4,
+    cantidad: 1,
+    image: "http://localhost:5000/uploads\\cuchilladeafeitar.png",
   },
 ];
 

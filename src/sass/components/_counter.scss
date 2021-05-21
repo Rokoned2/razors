@@ -1,0 +1,14 @@
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__btn {
+    cursor: pointer;
+    &:hover {
+      color: gray;
+    }
+  }
+  &__number {
+    padding: 1rem;
+  }
+}

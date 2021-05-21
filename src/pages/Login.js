@@ -1,21 +1,45 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import {
+  AuthCheck,
+  // StorageImage,
+  useAuth,
+  // useSigninCheck,
+} from "reactfire";
 
-const Login = () => {
+const Login = (props) => {
+  const auth = useAuth();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+
+  const signIn = ({ email, password }) => {
+    console.log("email, password", email, password);
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then(async () => {
+        props.history.push("/");
+        console.log("success");
+      })
+      .catch((error) => {
+        console.log("success", error);
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log("errorCode, errorMessage", errorCode, errorMessage);
+      });
+  };
+
   return (
     <>
-      <div className="heading-secondary text-center">Ingresa</div>
-      <form onSubmit={handleSubmit(onSubmit)} className="form">
+      <div className="heading-secondary text-center">Ingresar</div>
+      <form onSubmit={handleSubmit(signIn)} className="form">
         <div className="form__control">
           <label className="form__label">Correo electrónico</label>
           <input
+            type="email"
             className="form__input"
             {...register("email", { required: true })}
           />
@@ -23,6 +47,7 @@ const Login = () => {
         <div className="form__control">
           <label className="form__label">Contraseña</label>
           <input
+            type="password"
             {...register("password", { required: true })}
             className="form__input"
           />
@@ -32,7 +57,7 @@ const Login = () => {
         ) : null}
         <input type="submit" />
         <div className="form__cta-register">
-          ¿Necesitas registrarte? <Link to="/register">Haz click aquí!</Link>
+          ¿Necesitas registrarte? <Link to="/registrarse">Haz click aquí!</Link>
         </div>
       </form>
     </>
