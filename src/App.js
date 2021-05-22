@@ -10,7 +10,7 @@ import ProductSearch from "./pages/ProductSearch";
 import ProductDetails from "./pages/ProductDetails";
 import Register from "./pages/Register";
 import Cart from "./pages/Cart/Cart";
-import Upload from "./pages/Upload";
+import Upload from "./pages/UploadProduct/UploadProduct";
 import {
   AuthCheck,
   // StorageImage,

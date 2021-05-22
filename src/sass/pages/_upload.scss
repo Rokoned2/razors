@@ -35,6 +35,13 @@
     width: 30rem;
     height: 30rem;
     background-color: gray;
+    overflow-x: "scroll";
+  }
+
+  &__img-output {
+    // min-width: "300px";
+    max-width: "30rem";
+    max-height: "30rem";
   }
 
   &__form {

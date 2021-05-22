@@ -1,27 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaUpload } from "react-icons/fa";
+import FileUpload from "./FileUpload";
+import api from "../../apis/products";
 
-const Upload = () => {
+const UploadProduct = (props) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
+  const [images, setImages] = useState([]);
+
   const submitProduct = (data) => {
-    console.log("data", data);
+    const { name, description, price } = data;
+
+    if (!name || !description || !price || !images) {
+      return alert("fill all the fields first!");
+    }
+
+    const variables = {
+      // writer: props.user.userData._id,
+      name,
+      description,
+      price,
+      images,
+    };
+
+    console.log("variables ", variables);
+    api.post("/product/uploadProduct", variables).then((response) => {
+      if (response.data.success) {
+        alert("Product Successfully Uploaded");
+        props.history.push("/");
+      } else {
+        alert("Failed to upload Product");
+      }
+    });
+  };
+
+  const updateImages = (newImages) => {
+    setImages(newImages);
   };
 
   return (
     <div className="upload">
       <h2 className="secondary-heading">Subir Producto</h2>
-      <div className="upload__images">
-        <div className="upload__imgs-input">
-          <FaUpload className="upload__imgs-input-icon" />
-        </div>
-        <div className="upload__imgs-output"></div>
-      </div>
+      <FileUpload refreshFunction={updateImages} />
       <form onSubmit={handleSubmit(submitProduct)} className="upload__form">
         <div>
           <label>Nombre</label>
@@ -49,12 +73,12 @@ const Upload = () => {
             type="number"
           />
         </div>
-        <div className="btn" type="submit">
+        <button className="btn" type="submit">
           Submit
-        </div>
+        </button>
       </form>
     </div>
   );
 };
 
-export default Upload;
+export default UploadProduct;
